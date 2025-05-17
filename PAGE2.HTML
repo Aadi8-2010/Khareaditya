@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animated Beautiful Form</title>
+  <center><h1>congrats!! you have filled the developers form now sign in !</h1><center></center><br><br>
+  <style>
+   h1{
+    color:blue;
+    background-color:bisque;
+  </style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+      width: 100%;
+      max-width: 400px;
+      animation: slideIn 1s ease-out;
+      transition: all 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+      color: white;
+      transition: 0.3s;
+      outline: none;
+    }
+
+    .input-group label {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      color: #fff;
+      pointer-events: none;
+      transition: 0.3s ease;
+    }
+
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + label {
+      top: 0;
+      font-size: 12px;
+      color: #ffddff;
+      background: rgba(0,0,0,0.3);
+      padding: 0 6px;
+      border-radius: 4px;
+      left: 12px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ffffff30;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background: #ffffff50;
+      transform: scale(1.03);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container">
+    <h2>Sign In</h2>
+
+    <div class="input-group">
+      <input type="text" id="username" required placeholder=" " />
+      <label for="username">Username</label>
+    </div>
+
+    <div class="input-group">
+      <input type="email" id="email" required placeholder=" " />
+      <label for="email">Email</label>
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="password" required placeholder=" " />
+      <label for="password">Password</label>
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
+</body>
+</html>
+
